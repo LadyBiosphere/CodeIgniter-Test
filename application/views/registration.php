@@ -5,18 +5,38 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 <?php
 
+	// Form settings
+	$usernameSettings 			= ['name'=>'username', 'id'=>'username', 'value'=>set_value('username')];
+	$passwordSettings 			= ['name'=>'password', 'id'=>'password'];
+	$confirmPasswordSettings 	= ['name'=>'password2', 'id'=>'password2'];
+	$emailSettings 				= ['name'=>'email', 'id'=>'email', 'value'=>set_value('email')];
+
 	echo form_open('registration/doRegistration');
+?>
 
-	// Prep settings for username
-	$usernameSettings = ['name'=>'username', 'id'=>'username'];
+<div>
+	<?php echo form_label('Username:' , 'username' ); ?>
+	<?php echo form_input($usernameSettings); ?>
+</div>
+<div>
+	<?php echo form_label('Password:', 'password'); ?>
+	<?php echo form_password($passwordSettings); ?>
+</div>
+<div>
+	<?php echo form_label('Confirm Password:', 'password2'); ?>
+	<?php echo form_password($confirmPasswordSettings); ?>
+</div>
+<div>
+	<?php echo form_label('Email:' , 'email' ); ?>
+	<?php echo form_input($emailSettings); ?>
+</div>
+<div>
+	<?php echo form_submit('Register', 'Sign up');?>
+</div>
 
-	echo form_label('username:' , 'username' );
-	echo form_input($usernameSettings);
+<?php
 
-	echo form_submit('Register', 'Sign up');
-
-
-
+	// Close the form
 	echo form_close();
 
 	echo validation_errors();
