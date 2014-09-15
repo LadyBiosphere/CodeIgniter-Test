@@ -5,26 +5,16 @@ class Home extends CI_Controller {
 	// Index method runs automatically if no other method is called
 	public function index(){
 
-		// This is important for URLs, e.g. nav
-		// $this->load->helper('url');
-
-		// Load page model
-		// $this->load->model('page');
-
 		// Get page data
 		$pageData = $this->page->getPageData('home');
 
-		// Data for header
-		// $dataForHeader['title'] = 'Home page title';
-		// $dataForHeader['meta_desc'] = 'Everything that describes the homepage goes here';
-
-		// Header
+		// Header HTML. Send page data for Title, meta etc
 		$this->load->view('templates/header', $pageData);
 
 		// Home content
 		$this->load->view('home');
 
-		// Footer
+		// Footer HTML
 		$this->load->view('templates/footer');
 	}
 }

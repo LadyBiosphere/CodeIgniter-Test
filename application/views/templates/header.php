@@ -8,6 +8,9 @@
 <body>
 	<nav>
 		<ul>
+		<!-- Anchor function is from URL helper -->
+		<!-- Arguement 1 = controller to load -->
+		<!-- Arguement 2 = text that will be clicked -->
 			<li><?php echo anchor('home', 'Home'); ?></li>
 			<li><?php echo anchor('about', 'About'); ?></li>
 			<li><?php echo anchor('registration', 'Registration'); ?></li>

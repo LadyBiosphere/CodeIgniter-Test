@@ -9,13 +9,13 @@ class About extends CI_Controller {
 		$dataForHeader['title'] = 'About page title';
 		$dataForHeader['meta_desc'] = 'Everything that describes the about page goes here';
 
-		// Header
+		// Header HTML
 		$this->load->view('templates/header', $dataForHeader);
 
-		// Home content
+		// About content
 		$this->load->view('about');
 
-		// Footer
+		// Footer HTML
 		$this->load->view('templates/footer');
 	}
 }
