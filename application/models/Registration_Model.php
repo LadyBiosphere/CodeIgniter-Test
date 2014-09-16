@@ -11,10 +11,16 @@ class Registration_Model extends CI_Model {
 
     function registerAccount() {
 
+        // Loead password hasher
+        require APPPATH.'libraries/password.php';
+
+        // Hash the password
+        $hashedPassword = password_hash($this->input->post('password'), PASSWORD_BCRYPT);
+
     	// Prepare data for database
     	$data = [
     		'Username' 	=> $this->input->post('username'),
-    		'Password' 	=> $this->input->post('password'),
+    		'Password' 	=> $hashedPassword,
     		'Email'		=> $this->input->post('email')
     	];
 
