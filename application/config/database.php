@@ -65,9 +65,9 @@ $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
 
 $db['live']['hostname'] = 'localhost';
-$db['live']['username'] = 'nishi.singh.yoobee.net.nz';
-$db['live']['password'] = 'Y00beeNishi';
-$db['live']['database'] = 'code_igniter';
+$db['live']['username'] = 'user@site.com';
+$db['live']['password'] = 'reallyHardPassword';
+$db['live']['database'] = 'nameOfDBOnServer';
 $db['live']['dbdriver'] = 'mysql';
 $db['live']['dbprefix'] = '';
 $db['live']['pconnect'] = TRUE;
@@ -79,7 +79,6 @@ $db['live']['dbcollat'] = 'utf8_general_ci';
 $db['live']['swap_pre'] = '';
 $db['live']['autoinit'] = TRUE;
 $db['live']['stricton'] = FALSE;
-
 
 /* End of file database.php */
 /* Location: ./application/config/database.php */

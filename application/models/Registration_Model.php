@@ -9,28 +9,17 @@ class Registration_Model extends CI_Model {
         $this->load->database();
     }
 
-    function registerAccount(){
-    	$this->load->view('registrtion');
-    } else {
-    	// Load the model
-    	$this->load->model('Registration_Model');
+    function registerAccount() {
 
-    	// Do registration
-    	$this->Registration_Model->registerAccount();
-
-    	// this->load->view('formsuccess');
-    	echo 'success';
-    }
-
-    function registerAccount(){
-    	// Prep data for database
+    	// Prepare data for database
     	$data = [
-	    		'Username'=>$this->input->post('username'),
-	    		'Password'=>$this->input->post('password'),
-	    		'Email'=>$this->input->post('email')
-    		];
+    		'Username' 	=> $this->input->post('username'),
+    		'Password' 	=> $this->input->post('password'),
+    		'Email'		=> $this->input->post('email')
+    	];
 
-    		// Insert into db
-    		$this->db->insert('users', $data);
+    	// Insert into DB
+    	$this->db->insert('users', $data);
+
     }
 }

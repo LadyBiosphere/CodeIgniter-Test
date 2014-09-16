@@ -1,31 +1,29 @@
 <?php
 
-	class Page extends CI_Model {
+class Page extends CI_Model {
 
-		// Constructor is optional. It is only needed when
-		// you want to load a resource globally
-	    function __construct()
-	    {
-	    	// Required. Without it, the parent model class is destroyed
-	        parent::__construct();
+    // Constructor is optional
+    // Only needed if you want to load a resource globally
+    function __construct()
+    {
+        // REQUIRED! Without this we destroy the parent model class
+        parent::__construct();
 
-	        // Connect to the database
-	         $this->load->database();
-	    }
+        // Connect to DB
+    	$this->load->database();
+    }
 
-	    // Function to get page data
-	    public function getPageData($pageData){
+    // Function to get page data
+    public function getPageData( $pageName ) {
 
-	    	// Select from table were Page_Name = $pageName
-	    	// Get, where:
-	    	// Arguement 1 = name of table
-	    	// Arguement 2 = array with keys as column names and values as value 
-	    	// to look for
+    	// Select from table where Page_Name = $pageName
+        // get where:
+        // arg1 = name of table
+        // arg2 = array with keys as column names, and values as value to look for
+    	$query = $this->db->get_where('pages', ['Page_Name'=>$pageName]);
 
-	    	 $query = $this->db->get_where('pages', ['Page_Name'=>'$pageName']);
+    	// Return the result as an associative array
+    	return $query->row_array();
 
-	    	 // Return the result as an assoc
-	    	 return $query->row_array();
-	}
-
+    }
 }

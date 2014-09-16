@@ -3,19 +3,20 @@
 class About extends CI_Controller {
 
 	// Index method runs automatically if no other method is called
-	public function index(){
+	public function index() {
 
-		// Data for header
-		$dataForHeader['title'] = 'About page title';
-		$dataForHeader['meta_desc'] = 'Everything that describes the about page goes here';
+		// Get page data
+		$pageData = $this->page->getPageData('about');
 
-		// Header HTML
-		$this->load->view('templates/header', $dataForHeader);
+		// Header
+		$this->load->view('templates/header', $pageData);
 
-		// About content
+		// Home content
 		$this->load->view('about');
 
-		// Footer HTML
+		// Footer
 		$this->load->view('templates/footer');
+
 	}
+
 }
