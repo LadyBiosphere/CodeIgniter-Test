@@ -8,14 +8,17 @@
 </head>
 <body>
 
+<div id = "container">
+
 <nav>
 	<ul>
-		<li><?php 
+		<li>|<?php 
 			// anchor function is from url helper
 			// arg 1 is the controller to load
 			// arg 2 is the click text
 			echo anchor('home', 'Home'); ?></li>
-		<li><?php echo anchor('about', 'About'); ?></li>
-		<li><?php echo anchor('registration', 'Registration'); ?></li>
+		<li>|<?php echo anchor('about', 'About'); ?></li>
+		<li>|<?php echo anchor('registration', 'Registration'); ?></li>
 	</ul>
 </nav>
+

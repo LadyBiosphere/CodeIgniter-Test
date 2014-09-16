@@ -1,4 +1,4 @@
-<h1>Register an account</h1>
+<h1>Talk to the fox</h1>
 
 <p>Use this form to register an account</p>
 

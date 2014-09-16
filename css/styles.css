@@ -2,14 +2,65 @@ body {
 	background-color: #F9690E;
 	color: #000;
 	font-family: Tahoma, Arial, Serif;
+	line-height: 30px;
+}
+
+#container {
+	width: 920px;
+	background-color: #000;
+	margin: 0 auto;
+	color: #fff;
+}
+
+nav, footer {
+	background-color: #F9690E;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+nav ul {
+	list-style: none;
+	text-align: center;
+}
+
+nav ul li {
+	display: inline-block;
+	margin-right: 40px;
 }
 
 a {
 	color: #fff;
 	text-transform: uppercase;
 	text-decoration: none;
+	padding: 10px;
 }
 
 a:hover {
 	color: #FDE3A7;
+	background-color: #000;
+}
+
+#container img {
+	width: 700px;
+	display: block;
+	/*margin: 0 auto;*/
+	margin-left: 25px;
+}
+
+h1 {
+	text-align: center;
+}
+
+p {
+	width: 860px;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+form label {
+	margin-left: 25px;
+}
+
+form input {
+	margin-left: 25px;
 }

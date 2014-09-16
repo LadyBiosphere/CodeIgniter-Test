@@ -1,4 +1,7 @@
-<h1>Home Page</h1>
+<h1>What did the fox say?</h1>
+
+
+<img src="<?php echo base_url(); ?>images/fox2.jpg">
 
 <p>Home page blah Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
